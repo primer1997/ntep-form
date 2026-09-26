@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NTEP Request Form — Annexure 15A</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#047857;--green-d:#064e3b;--teal:#0e7490;--green-l:#d1fae5;--ink:#1e293b;--mut:#64748b;--line:#e2e8f0;--bg:#f4f5f3;--card:#ffffff;--red:#b91c1c;--gold:#b45309;--shadow:0 1px 2px rgba(16,24,40,.05),0 6px 20px rgba(16,24,40,.07)}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+.app-header{background:linear-gradient(135deg,#064e3b 0%,#047857 58%,#0e7490 135%);color:#fff;padding:15px 16px 13px;position:sticky;top:0;z-index:20;box-shadow:0 2px 10px rgba(6,78,59,.35);border-bottom:1px solid rgba(255,255,255,.14)}
+.app-header h1{font-size:17px;font-weight:800;letter-spacing:.2px}
+.app-header p{font-size:12px;opacity:.92;margin-top:3px}
+.wrap{max-width:760px;margin:0 auto;padding:14px 12px 90px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:14px;box-shadow:var(--shadow)}
+.sec-title{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--green-d),var(--green));color:#fff;font-weight:700;font-size:15px;padding:9px 12px;border-radius:10px;margin-bottom:12px;letter-spacing:.2px;box-shadow:0 2px 6px rgba(6,78,59,.25)}
+.sec-title .step-n{display:inline-flex;align-items:center;justify-content:center;min-width:27px;height:27px;border-radius:50%;background:rgba(255,255,255,.16);border:1.5px solid rgba(255,255,255,.55);font-size:13.5px;font-weight:800;flex:none}
+.sec-title .mr{font-weight:400;font-size:12.5px;opacity:.92}
+.fld{margin-bottom:12px}
+.fld label.lbl{display:block;font-weight:600;font-size:13.5px;margin-bottom:5px;color:#374151}
+.fld label.lbl .req{color:var(--red)}
+.fld .hint{font-size:12px;color:var(--mut);margin-top:3px}
+input[type=text],input[type=number],input[type=tel],input[type=email],input[type=date],textarea,select{width:100%;padding:10px 11px;border:1px solid var(--line);border-radius:9px;font-size:15px;background:#fff;color:var(--ink);transition:border-color .18s ease,box-shadow .18s ease}
+textarea{min-height:64px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(4,120,87,.15)}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:inline-flex;align-items:center;gap:7px;background:#f8fafc;border:1px solid var(--line);border-radius:9px;padding:9px 12px;min-height:44px;cursor:pointer;font-size:14px;transition:border-color .18s ease,background .18s ease,transform .12s ease}
+.opt:active{transform:scale(.97)}
+.opt input{width:18px;height:18px;accent-color:var(--green);flex:none}
+.opt:has(input:checked){border-color:var(--green);background:var(--green-l);box-shadow:inset 0 0 0 1px var(--green)}
+.sub{font-weight:600;font-size:14px;color:var(--green-d);margin:14px 0 8px;padding-top:10px;border-top:1px dashed var(--line)}
+.sub:first-child{border-top:none;padding-top:0;margin-top:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:480px){.grid2{grid-template-columns:1fr}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:700;cursor:pointer;min-height:48px;transition:transform .12s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.btn:active{transform:scale(.96)}
+.btn-pri{background:linear-gradient(135deg,var(--green-d),var(--green));color:#fff;box-shadow:0 3px 10px rgba(6,78,59,.3)}
+.btn-pri:active{background:var(--green-d)}
+.btn-sec{background:#fff;color:var(--green-d);border:1.5px solid var(--green);box-shadow:0 1px 4px rgba(6,78,59,.08)}
+.btn-danger{background:#fff;color:var(--red);border:1.5px solid var(--red)}
+.btn-sm{padding:8px 10px;min-height:42px;font-size:13px;border-radius:9px}
+.actionbar{position:sticky;bottom:0;background:rgba(255,255,255,.97);backdrop-filter:blur(6px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px;z-index:20;box-shadow:0 -3px 12px rgba(16,24,40,.06)}
+.actionbar .btn{flex:1}
+.topbar{display:flex;gap:10px;margin-bottom:12px}
+.topbar .btn{flex:1}
+.search{width:100%;margin-bottom:10px}
+.rec{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px;box-shadow:var(--shadow);animation:fadeUp .4s cubic-bezier(.2,.7,.3,1) both}
+.rec .nm{font-weight:700;font-size:16px}
+.rec .meta{font-size:13px;color:var(--mut);margin:3px 0 10px}
+.rec .row{display:flex;gap:7px;flex-wrap:wrap}
+.rec .row .btn{flex:1 1 0;white-space:nowrap}
+.empty{text-align:center;color:var(--mut);padding:34px 10px;font-size:14px}
+.badge{display:inline-block;background:#fff;color:var(--green-d);border:1.5px solid #fff;border-radius:6px;font-size:11px;font-weight:800;padding:2px 8px;letter-spacing:.5px}
+.form-head{text-align:center;padding:8px 2px 12px}
+.form-head h2{font-size:17px;color:var(--green-d);font-weight:800;letter-spacing:.2px}
+.form-head p{font-size:12.5px;color:var(--mut);margin-top:3px}
+.form-head .mr-line{display:inline-block;font-size:14px;color:var(--green-d);font-weight:700;margin-top:6px;background:var(--green-l);border:1px solid #a7f3d0;padding:4px 14px;border-radius:99px}
+details.lab{border:2px dashed var(--green);border-radius:12px;padding:12px;background:#f6fefb;box-shadow:var(--shadow)}
+details.lab summary{font-weight:800;color:var(--green-d);font-size:15px;cursor:pointer;min-height:44px;display:flex;align-items:center;list-style:none;gap:8px}
+details.lab summary::-webkit-details-marker{display:none}
+details.lab summary::after{content:'▾';margin-left:auto;font-size:18px;transition:transform .32s cubic-bezier(.2,.7,.3,1);color:var(--green)}
+details.lab[open] summary::after{transform:rotate(180deg)}
+details.lab .lab-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.2,.7,.3,1)}
+details.lab[open] .lab-body{grid-template-rows:1fr}
+details.lab .lab-body>div{overflow:hidden;min-height:0}
+table.dst{width:100%;border-collapse:collapse;font-size:13.5px}
+table.dst th,table.dst td{border:1px solid var(--line);padding:6px 4px;text-align:center}
+table.dst th{background:var(--green-l);font-size:12px;color:var(--green-d)}
+table.dst td.drug{text-align:left;font-weight:600;padding-left:8px}
+table.dst select{width:100%;border:none;font-size:14px;padding:6px 2px;background:transparent}
+.legend{font-size:12.5px;color:var(--mut);margin-top:6px}
+.hintbar{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:12px;color:#92400e;box-shadow:var(--shadow)}
+#toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,12px);background:#111827;color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;z-index:99;max-width:92%;text-align:center;opacity:0;pointer-events:none;transition:opacity .28s ease,transform .28s cubic-bezier(.2,.7,.3,1);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+/* ---------- progress ---------- */
+.progress{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:12px;box-shadow:var(--shadow)}
+.progress-top{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:var(--green-d);margin-bottom:7px}
+.progress-track{height:7px;background:#e7eef0;border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;width:0%;border-radius:99px;background:linear-gradient(90deg,var(--teal),var(--green));transition:width .45s cubic-bezier(.2,.7,.3,1)}
+/* ---------- animations ---------- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.view-anim{animation:fadeUp .38s cubic-bezier(.22,.9,.3,1) both}
+#formScreen.play>*{animation:fadeUp .45s cubic-bezier(.2,.7,.3,1) both}
+#formScreen.play>*:nth-child(1){animation-delay:.02s}
+#formScreen.play>*:nth-child(2){animation-delay:.07s}
+#formScreen.play>*:nth-child(3){animation-delay:.12s}
+#formScreen.play>*:nth-child(4){animation-delay:.17s}
+#formScreen.play>*:nth-child(5){animation-delay:.22s}
+#formScreen.play>*:nth-child(6){animation-delay:.27s}
+#formScreen.play>*:nth-child(7){animation-delay:.32s}
+#formScreen.play>*:nth-child(8){animation-delay:.37s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  #formScreen.play>*{animation-delay:0s!important}
+}
+/* ---------- print ---------- */
+#printView{display:none}
+@media print{
+  @page{size:A4 portrait;margin:9mm 8mm}
+  body{background:#fff;font-size:10.5px;line-height:1.35}
+  .app-header,.wrap,.actionbar,#toast,.progress{display:none!important}
+  #printView{display:block!important}
+}
+</style>
+<!-- Shared official-document styles: used by the print view AND inlined into standalone exported files -->
+<style id="docStyles">
+.p-doc{font-family:Georgia,"Times New Roman",serif;color:#000;background:#fff}
+.p-title{text-align:center;font-weight:800;font-size:15px;margin-bottom:1px}
+.p-sub{text-align:center;font-size:10.5px;margin-bottom:1px}
+.p-ann{text-align:center;font-size:10px;font-weight:700;border:1px solid #000;display:inline-block;padding:1px 10px;margin:4px 0 8px}
+.p-annwrap{text-align:center}
+.p-sec{margin-top:8px;page-break-inside:avoid}
+.p-sec-t{font-weight:800;font-size:11.5px;background:#e8e8e8;border-top:1.5px solid #000;border-bottom:1px solid #000;padding:3px 6px;margin-bottom:4px}
+.p-row{margin:2px 0}
+.p-lab{font-weight:700}
+.p-cb{font-size:12px}
+.p-grid{display:flex;flex-wrap:wrap;gap:2px 14px}
+.p-grid>div{margin:1px 0}
+.p-2col{display:flex;gap:14px}
+.p-2col>div{flex:1}
+.p-line{border-bottom:1px dotted #000;min-width:120px;display:inline-block}
+table.p-dst{width:100%;border-collapse:collapse;font-size:9.5px;margin-top:3px}
+table.p-dst th,table.p-dst td{border:1px solid #000;padding:2px 3px;text-align:center}
+.p-foot{margin-top:10px;display:flex;justify-content:space-between;font-size:10px}
+.p-sig{margin-top:26px;border-top:1px solid #000;width:200px;text-align:center;font-size:9.5px}
+.p-meta{text-align:right;font-size:9.5px;color:#333;margin-bottom:6px}
+@media screen{
+  .p-doc{max-width:760px;margin:14px auto;padding:18px;box-shadow:0 2px 14px rgba(0,0,0,.12);border:1px solid #ddd}
+}
+</style>
+</head>
+<body>
+<header class="app-header">
+  <h1>🫁 NTEP Request Form <span class="badge">ANNEXURE 15A</span></h1>
+  <p>क्षयरोग तपासणी विनंती अर्ज — भरा व PDF काढा</p>
+</header>
+
+<div class="wrap">
+  <!-- ============ HOME ============ -->
+  <div id="homeScreen">
+    <div class="topbar">
+      <button class="btn btn-pri" id="newFormBtn">＋ New Form / नवीन अर्ज</button>
+    </div>
+    <input class="search" type="text" id="searchBox" placeholder="🔍 Search by patient name or mobile…">
+    <div id="formList"></div>
+  </div>
+
+  <!-- ============ FORM ============ -->
+  <div id="formScreen" style="display:none">
+    <div class="progress" aria-hidden="true">
+      <div class="progress-top"><span>भरण्याची प्रगती · Completion</span><span id="progressPct">0%</span></div>
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    </div>
+    <div class="form-head">
+      <h2>NTEP Request Form For examination of biological specimen for TB</h2>
+      <p>(Required for Diagnosis of TB, Drug Sensitivity Testing and follow up)</p>
+      <div class="mr-line">क्षयरोग तपासणी विनंती अर्ज</div>
+    </div>
+
+    <!-- SECTION 2 : PATIENT INFORMATION -->
+    <div class="card">
+      <div class="sec-title">2. Patient Information <span class="mr">· रुग्णाची माहिती</span></div>
+      <div class="fld"><label class="lbl">Patient name <span class="req">*</span></label>
+        <input type="text" data-f="patientName" placeholder="Full name"></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Age</label><input type="number" data-f="age" min="0" max="130"></div>
+        <div class="fld"><label class="lbl">Gender</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="gender" data-f="gender" value="M"> M</label>
+            <label class="opt"><input type="radio" name="gender" data-f="gender" value="F"> F</label>
+            <label class="opt"><input type="radio" name="gender" data-f="gender" value="TG"> TG</label>
+          </div></div>
+      </div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Mobile no.</label>
+          <input type="tel" data-f="mobile" inputmode="numeric" maxlength="10" placeholder="10 digits"></div>
+        <div class="fld"><label class="lbl">Specimen date of collection</label>
+          <input type="date" data-f="specimenDate"></div>
+      </div>
+      <div class="fld"><label class="lbl">Specimen type</label>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="specType" data-f="specimenType" value="Sputum"> Sputum</label>
+          <label class="opt"><input type="radio" name="specType" data-f="specimenType" value="Other"> Other</label>
+        </div>
+        <div class="hint">If Other, specify:</div>
+        <input type="text" data-f="specimenTypeOther" placeholder="Specify specimen" style="margin-top:6px"></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Aadhar no. (optional)</label>
+          <input type="tel" data-f="aadhar" inputmode="numeric" maxlength="12" placeholder="12 digits"></div>
+        <div class="fld"><label class="lbl">HIV status</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="hiv" data-f="hivStatus" value="Reactive"> Reactive</label>
+            <label class="opt"><input type="radio" name="hiv" data-f="hivStatus" value="Non-Reactive"> Non-Reactive</label>
+            <label class="opt"><input type="radio" name="hiv" data-f="hivStatus" value="Unknown"> Unknown</label>
+          </div></div>
+      </div>
+      <div class="fld"><label class="lbl">Address with landmark</label>
+        <textarea data-f="address" placeholder="Address + landmark"></textarea></div>
+      <div class="fld"><label class="lbl">Key populations</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="kp_contact"> Contact of known TB Patient</label>
+          <label class="opt"><input type="checkbox" data-f="kp_diabetes"> Diabetes</label>
+          <label class="opt"><input type="checkbox" data-f="kp_tobacco"> Tobacco</label>
+          <label class="opt"><input type="checkbox" data-f="kp_prison"> Prison</label>
+          <label class="opt"><input type="checkbox" data-f="kp_miner"> Miner</label>
+          <label class="opt"><input type="checkbox" data-f="kp_migrant"> Migrant</label>
+          <label class="opt"><input type="checkbox" data-f="kp_refugee"> Refugee</label>
+          <label class="opt"><input type="checkbox" data-f="kp_slum"> Urban slum</label>
+          <label class="opt"><input type="checkbox" data-f="kp_hcw"> Health-care worker</label>
+          <label class="opt"><input type="checkbox" data-f="kp_other"> Other</label>
+        </div>
+        <input type="text" data-f="kp_other_text" placeholder="If Other, specify" style="margin-top:6px"></div>
+    </div>
+
+    <!-- SECTION 3 : REFERRING FACILITY -->
+    <div class="card">
+      <div class="sec-title">3. Referring Facility <span class="mr">· संदर्भ देणारी सुविधा</span></div>
+      <div class="fld"><label class="lbl">Name of referring facility</label>
+        <input type="text" data-f="facilityName" placeholder="Facility name">
+        <div class="hint">Type: PHI / DMC / TU / DTC / ICTC / ART / Medical College / DR-TB Centre / Private / Others</div>
+        <select data-f="facilityType" style="margin-top:6px">
+          <option value="">— Select facility type —</option>
+          <option>PHI</option><option>DMC</option><option>TU</option><option>DTC</option>
+          <option>ICTC</option><option>ART</option><option>Medical College</option>
+          <option>DR-TB Centre</option><option>Private</option><option>Others</option>
+        </select></div>
+      <div class="fld"><label class="lbl">Health Establishment ID (NIKSHAY)</label>
+        <input type="text" data-f="healthEstId"></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">State</label><input type="text" data-f="state"></div>
+        <div class="fld"><label class="lbl">District</label><input type="text" data-f="district"></div>
+      </div>
+      <div class="fld"><label class="lbl">Tuberculosis Unit (TU)</label><input type="text" data-f="tu"></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Episode ID</label><input type="text" data-f="episodeId"></div>
+        <div class="fld"><label class="lbl">Test request ID</label><input type="text" data-f="testRequestId"></div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 : REASON FOR TESTING -->
+    <div class="card">
+      <div class="sec-title">4. Reason for Testing <span class="mr">· तपासणीचे कारण</span></div>
+
+      <div class="sub">A. Diagnosis and follow up of TB</div>
+      <div class="fld"><label class="lbl">H/O anti TB Rx &gt;1 month</label>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="antiTBRx" data-f="antiTBRx" value="Yes"> Yes</label>
+          <label class="opt"><input type="radio" name="antiTBRx" data-f="antiTBRx" value="No"> No</label>
+        </div></div>
+      <div class="fld"><label class="lbl">Reason</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="tb_presumptive"> Presumptive TB</label>
+          <label class="opt"><input type="checkbox" data-f="tb_repeat"> Repeat Exam</label>
+          <label class="opt"><input type="checkbox" data-f="tb_private"> Private referral</label>
+          <label class="opt"><input type="checkbox" data-f="tb_ntm"> Presumptive NTM</label>
+        </div></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Predominant symptom</label><input type="text" data-f="symptom"></div>
+        <div class="fld"><label class="lbl">Duration (days)</label><input type="number" data-f="symptomDays" min="0"></div>
+      </div>
+      <div class="fld"><label class="lbl">Follow-up</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="fu_endip"> End IP</label>
+          <label class="opt"><input type="checkbox" data-f="fu_endcp"> End CP</label>
+        </div></div>
+      <div class="fld"><label class="lbl">Post treatment follow-up</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="pt_6m"> 6m</label>
+          <label class="opt"><input type="checkbox" data-f="pt_12m"> 12m</label>
+          <label class="opt"><input type="checkbox" data-f="pt_18m"> 18m</label>
+          <label class="opt"><input type="checkbox" data-f="pt_24m"> 24m</label>
+        </div></div>
+
+      <div class="sub">B. Diagnosis and follow up — Drug-resistant TB</div>
+      <div class="fld"><label class="lbl">Case type</label>
+        <div class="opts">
+          <label class="opt"><input type="radio" name="caseType" data-f="caseType" value="New"> New</label>
+          <label class="opt"><input type="radio" name="caseType" data-f="caseType" value="Previously treated"> Previously treated</label>
+        </div></div>
+      <div class="fld"><label class="lbl">Type of case</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="dr_h"> H mono/poly TB</label>
+          <label class="opt"><input type="checkbox" data-f="dr_mdrrr"> MDR/RR</label>
+          <label class="opt"><input type="checkbox" data-f="dr_xdr"> XDR TB</label>
+        </div></div>
+      <div class="fld"><label class="lbl">Regimen type</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="reg_alloral_h"> All oral H mono/poly TB</label>
+          <label class="opt"><input type="checkbox" data-f="reg_shorter"> Shorter MDR TB regimen</label>
+          <label class="opt"><input type="checkbox" data-f="reg_longer"> All oral longer regimen</label>
+        </div></div>
+      <div class="fld"><label class="lbl">Regimen composition</label>
+        <div class="opts">
+          <label class="opt"><input type="checkbox" data-f="rg_Lfx"> Lfx</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Mfxh"> Mfx(h)</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Bdq"> Bdq</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Lzd"> Lzd</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Cfz"> Cfz</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Cs"> Cs</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Z"> Z</label>
+          <label class="opt"><input type="checkbox" data-f="rg_E"> E</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Eto"> Eto</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Dlm"> Dlm</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Am"> Am</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Km"> Km</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Cm"> Cm</label>
+          <label class="opt"><input type="checkbox" data-f="rg_Other"> Other</label>
+        </div>
+        <input type="text" data-f="rg_Other_text" placeholder="If Other, specify" style="margin-top:6px"></div>
+      <div class="fld"><label class="lbl">Treatment follow-up (months)</label>
+        <input type="number" data-f="treatFuMonths" min="0"></div>
+
+      <div class="sub">C. Presumptive MDR TB</div>
+      <div class="fld"><div class="opts">
+        <label class="opt"><input type="checkbox" data-f="mdr_atdiag"> At diagnosis</label>
+        <label class="opt"><input type="checkbox" data-f="mdr_contact"> Contact of MDR/RR TB</label>
+        <label class="opt"><input type="checkbox" data-f="mdr_smpos"> Follow up Sm +ve</label>
+        <label class="opt"><input type="checkbox" data-f="mdr_private"> Private referral</label>
+        <label class="opt"><input type="checkbox" data-f="mdr_discord"> Discordance resolution</label>
+      </div></div>
+
+      <div class="sub">D. Presumptive H mono/poly</div>
+      <div class="fld"><div class="opts">
+        <label class="opt"><input type="checkbox" data-f="pres_h"> Presumptive H mono/poly</label>
+      </div></div>
+
+      <div class="sub">E. Presumptive XDR TB</div>
+      <div class="fld"><div class="opts">
+        <label class="opt"><input type="checkbox" data-f="xdr_atdiag"> MDR/RR TB at Diagnosis</label>
+        <label class="opt"><input type="checkbox" data-f="xdr_cultpos"> Follow up Culture positive</label>
+        <label class="opt"><input type="checkbox" data-f="xdr_fail"> Failure or recurrent of MDR/RR-TB regimen</label>
+        <label class="opt"><input type="checkbox" data-f="xdr_discord"> Discordance resolution</label>
+      </div>
+      <div class="hint" style="margin-top:6px">Follow-up culture positive — months:</div>
+      <input type="number" data-f="xdr_cultpos_months" min="0" placeholder="Months" style="margin-top:6px"></div>
+    </div>
+
+    <!-- SECTION 5 : TEST REQUESTED -->
+    <div class="card">
+      <div class="sec-title">5. Test Requested <span class="mr">· विनंती केलेली तपासणी</span></div>
+      <div class="fld"><div class="opts">
+        <label class="opt"><input type="checkbox" data-f="t_micro"> Microscopy</label>
+        <label class="opt"><input type="checkbox" data-f="t_tst"> TST</label>
+        <label class="opt"><input type="checkbox" data-f="t_igra"> IGRA</label>
+        <label class="opt"><input type="checkbox" data-f="t_xray"> Chest X-ray</label>
+        <label class="opt"><input type="checkbox" data-f="t_cyto"> Cytopathology</label>
+        <label class="opt"><input type="checkbox" data-f="t_histo"> Histopathology</label>
+        <label class="opt"><input type="checkbox" data-f="t_cbnaat"> CBNAAT</label>
+        <label class="opt"><input type="checkbox" data-f="t_truenat"> TrueNaat</label>
+        <label class="opt"><input type="checkbox" data-f="t_culture"> Culture</label>
+        <label class="opt"><input type="checkbox" data-f="t_dst"> DST</label>
+        <label class="opt"><input type="checkbox" data-f="t_fllpa"> FL-LPA</label>
+        <label class="opt"><input type="checkbox" data-f="t_sllpa"> SL-LPA</label>
+        <label class="opt"><input type="checkbox" data-f="t_seq"> Gene Sequencing</label>
+        <label class="opt"><input type="checkbox" data-f="t_other"> Other</label>
+      </div>
+      <input type="text" data-f="t_other_text" placeholder="If Other, specify" style="margin-top:6px"></div>
+      <div class="fld"><label class="lbl">Requested by (designation)</label>
+        <input type="text" data-f="requestedBy"></div>
+      <div class="grid2">
+        <div class="fld"><label class="lbl">Contact number</label>
+          <input type="tel" data-f="reqContact" inputmode="numeric" maxlength="10"></div>
+        <div class="fld"><label class="lbl">Email ID</label>
+          <input type="email" data-f="reqEmail" placeholder="name@example.com"></div>
+      </div>
+    </div>
+
+    <!-- SECTION 6 : RESULTS (LAB) -->
+    <div class="card">
+      <details class="lab">
+        <summary>6. Results — प्रयोगशाळा विभाग <span style="font-weight:400;font-size:12px">(For laboratory use — tap to expand)</span></summary>
+        <div style="height:10px"></div>
+        <div class="fld"><label class="lbl">NIKSHAY ID Generated</label>
+          <input type="text" data-f="nikshayId"></div>
+
+        <div class="sub">Microscopy</div>
+        <div class="fld"><label class="lbl">Method</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="microMethod" data-f="microMethod" value="ZN"> ZN</label>
+            <label class="opt"><input type="radio" name="microMethod" data-f="microMethod" value="Fluorescent"> Fluorescent</label>
+          </div></div>
+        <div class="sub">Sample A</div>
+        <div class="fld"><label class="lbl">Lab sr. no.</label><input type="text" data-f="microA_srno"></div>
+        <div class="fld"><label class="lbl">Visual appearance</label>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" data-f="microA_S"> S</label>
+            <label class="opt"><input type="checkbox" data-f="microA_M"> M</label>
+            <label class="opt"><input type="checkbox" data-f="microA_B"> B</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Result</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="microAres" data-f="microA_result" value="Negative"> Negative</label>
+            <label class="opt"><input type="radio" name="microAres" data-f="microA_result" value="Scanty"> Scanty</label>
+            <label class="opt"><input type="radio" name="microAres" data-f="microA_result" value="1+"> 1+</label>
+            <label class="opt"><input type="radio" name="microAres" data-f="microA_result" value="2+"> 2+</label>
+            <label class="opt"><input type="radio" name="microAres" data-f="microA_result" value="3+"> 3+</label>
+          </div></div>
+        <div class="sub">Sample B</div>
+        <div class="fld"><label class="lbl">Lab sr. no.</label><input type="text" data-f="microB_srno"></div>
+        <div class="fld"><label class="lbl">Visual appearance</label>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" data-f="microB_S"> S</label>
+            <label class="opt"><input type="checkbox" data-f="microB_M"> M</label>
+            <label class="opt"><input type="checkbox" data-f="microB_B"> B</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Result</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="microBres" data-f="microB_result" value="Negative"> Negative</label>
+            <label class="opt"><input type="radio" name="microBres" data-f="microB_result" value="Scanty"> Scanty</label>
+            <label class="opt"><input type="radio" name="microBres" data-f="microB_result" value="1+"> 1+</label>
+            <label class="opt"><input type="radio" name="microBres" data-f="microB_result" value="2+"> 2+</label>
+            <label class="opt"><input type="radio" name="microBres" data-f="microB_result" value="3+"> 3+</label>
+          </div></div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Date tested</label><input type="date" data-f="microDateTested"></div>
+          <div class="fld"><label class="lbl">Date reported</label><input type="date" data-f="microDateReported"></div>
+        </div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Reported by</label><input type="text" data-f="microReportedBy"></div>
+          <div class="fld"><label class="lbl">Laboratory name</label><input type="text" data-f="microLab"></div>
+        </div>
+
+        <div class="sub">NAAT</div>
+        <div class="fld"><label class="lbl">Lab serial</label><input type="text" data-f="naatSrno"></div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Type</label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="naatType" data-f="naatType" value="CBNAAT"> CBNAAT</label>
+              <label class="opt"><input type="radio" name="naatType" data-f="naatType" value="TrueNat"> TrueNat</label>
+            </div></div>
+          <div class="fld"><label class="lbl">Sample</label>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="naatSample" data-f="naatSample" value="A"> A</label>
+              <label class="opt"><input type="radio" name="naatSample" data-f="naatSample" value="B"> B</label>
+            </div></div>
+        </div>
+        <div class="fld"><label class="lbl">M. Tuberculosis</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="naatMtb" data-f="naatMtb" value="Detected"> Detected</label>
+            <label class="opt"><input type="radio" name="naatMtb" data-f="naatMtb" value="Not Detected"> Not Detected</label>
+            <label class="opt"><input type="radio" name="naatMtb" data-f="naatMtb" value="N/A"> N/A</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Rif Resistance</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="naatRif" data-f="naatRif" value="Detected"> Detected</label>
+            <label class="opt"><input type="radio" name="naatRif" data-f="naatRif" value="Not Detected"> Not Detected</label>
+            <label class="opt"><input type="radio" name="naatRif" data-f="naatRif" value="Indeterminate"> Indeterminate</label>
+            <label class="opt"><input type="radio" name="naatRif" data-f="naatRif" value="N/A"> N/A</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Test outcome</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="naatOut" data-f="naatOutcome" value="No Result"> No Result</label>
+            <label class="opt"><input type="radio" name="naatOut" data-f="naatOutcome" value="Invalid"> Invalid</label>
+            <label class="opt"><input type="radio" name="naatOut" data-f="naatOutcome" value="Error"> Error</label>
+          </div>
+          <input type="text" data-f="naatErrorCode" placeholder="Error code (if Error)" style="margin-top:6px"></div>
+
+        <div class="sub">Culture</div>
+        <div class="fld"><label class="lbl">Method</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="cultMethod" data-f="cultureMethod" value="LJ"> LJ</label>
+            <label class="opt"><input type="radio" name="cultMethod" data-f="cultureMethod" value="LC"> LC</label>
+          </div></div>
+        <div class="sub">Culture row 1</div>
+        <div class="fld"><label class="lbl">Lab sr. no.</label><input type="text" data-f="cult1_srno"></div>
+        <div class="fld"><label class="lbl">Result</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="cult1res" data-f="cult1_result" value="Negative"> Negative</label>
+            <label class="opt"><input type="radio" name="cult1res" data-f="cult1_result" value="Positive"> Positive</label>
+            <label class="opt"><input type="radio" name="cult1res" data-f="cult1_result" value="NTM"> NTM</label>
+            <label class="opt"><input type="radio" name="cult1res" data-f="cult1_result" value="Contamination"> Contamination</label>
+          </div>
+          <input type="text" data-f="cult1_species" placeholder="NTM species (if NTM)" style="margin-top:6px"></div>
+        <div class="sub">Culture row 2</div>
+        <div class="fld"><label class="lbl">Lab sr. no.</label><input type="text" data-f="cult2_srno"></div>
+        <div class="fld"><label class="lbl">Result</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="cult2res" data-f="cult2_result" value="Negative"> Negative</label>
+            <label class="opt"><input type="radio" name="cult2res" data-f="cult2_result" value="Positive"> Positive</label>
+            <label class="opt"><input type="radio" name="cult2res" data-f="cult2_result" value="NTM"> NTM</label>
+            <label class="opt"><input type="radio" name="cult2res" data-f="cult2_result" value="Contamination"> Contamination</label>
+          </div>
+          <input type="text" data-f="cult2_species" placeholder="NTM species (if NTM)" style="margin-top:6px"></div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Date result</label><input type="date" data-f="cultDateResult"></div>
+          <div class="fld"><label class="lbl">Date reported</label><input type="date" data-f="cultDateReported"></div>
+        </div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Reported by</label><input type="text" data-f="cultReportedBy"></div>
+          <div class="fld"><label class="lbl">Laboratory name</label><input type="text" data-f="cultLab"></div>
+        </div>
+
+        <div class="sub">First line LPA</div>
+        <div class="fld"><label class="lbl">Lab serial</label><input type="text" data-f="flpaSrno"></div>
+        <div class="fld"><label class="lbl">Type</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="flpaType" data-f="flpaType" value="Direct"> Direct</label>
+            <label class="opt"><input type="radio" name="flpaType" data-f="flpaType" value="Indirect"> Indirect</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Rifampicin (R) — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="flpaR" data-f="flpa_R" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="flpaR" data-f="flpa_R" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="flpaR" data-f="flpa_R" value="No"> No</label>
+          </div>
+          <input type="text" data-f="flpa_R_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Isoniazid (KatG) — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="flpaKatG" data-f="flpa_KatG" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="flpaKatG" data-f="flpa_KatG" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="flpaKatG" data-f="flpa_KatG" value="No"> No</label>
+          </div>
+          <input type="text" data-f="flpa_KatG_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Isoniazid (InhA) — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="flpaInhA" data-f="flpa_InhA" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="flpaInhA" data-f="flpa_InhA" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="flpaInhA" data-f="flpa_InhA" value="No"> No</label>
+          </div>
+          <input type="text" data-f="flpa_InhA_remark" placeholder="Remark" style="margin-top:6px"></div>
+
+        <div class="sub">Second line LPA</div>
+        <div class="fld"><label class="lbl">Lab serial</label><input type="text" data-f="slpaSrno"></div>
+        <div class="fld"><label class="lbl">Type</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaType" data-f="slpaType" value="Direct"> Direct</label>
+            <label class="opt"><input type="radio" name="slpaType" data-f="slpaType" value="Indirect"> Indirect</label>
+          </div></div>
+        <div class="fld"><label class="lbl">Levofloxacin — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaLfx" data-f="slpa_Lfx" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="slpaLfx" data-f="slpa_Lfx" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="slpaLfx" data-f="slpa_Lfx" value="No"> No</label>
+          </div>
+          <input type="text" data-f="slpa_Lfx_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Moxifloxacin — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaMfx" data-f="slpa_Mfx" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="slpaMfx" data-f="slpa_Mfx" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="slpaMfx" data-f="slpa_Mfx" value="No"> No</label>
+          </div>
+          <input type="text" data-f="slpa_Mfx_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Amikacin — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaAm" data-f="slpa_Am" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="slpaAm" data-f="slpa_Am" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="slpaAm" data-f="slpa_Am" value="No"> No</label>
+          </div>
+          <input type="text" data-f="slpa_Am_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Kanamycin — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaKm" data-f="slpa_Km" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="slpaKm" data-f="slpa_Km" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="slpaKm" data-f="slpa_Km" value="No"> No</label>
+          </div>
+          <input type="text" data-f="slpa_Km_remark" placeholder="Remark" style="margin-top:6px"></div>
+        <div class="fld"><label class="lbl">Capreomycin — resistant</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="slpaCm" data-f="slpa_Cm" value="Yes"> Yes</label>
+            <label class="opt"><input type="radio" name="slpaCm" data-f="slpa_Cm" value="Inferred"> Inferred</label>
+            <label class="opt"><input type="radio" name="slpaCm" data-f="slpa_Cm" value="No"> No</label>
+          </div>
+          <input type="text" data-f="slpa_Cm_remark" placeholder="Remark" style="margin-top:6px"></div>
+
+        <div class="sub">DST</div>
+        <div class="fld"><label class="lbl">Lab sr. no.</label><input type="text" data-f="dstSrno"></div>
+        <div class="fld"><label class="lbl">Drug susceptibility</label>
+          <table class="dst">
+            <tr><th style="text-align:left;padding-left:8px">Drug</th><th>Result</th></tr>
+            <tr><td class="drug">R</td><td><select data-f="dst_R"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">H (inhA)</td><td><select data-f="dst_HinhA"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">H (katG)</td><td><select data-f="dst_HkatG"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Z</td><td><select data-f="dst_Z"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">E</td><td><select data-f="dst_E"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">S</td><td><select data-f="dst_S"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Km</td><td><select data-f="dst_Km"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Cm</td><td><select data-f="dst_Cm"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Am</td><td><select data-f="dst_Am"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Lfx</td><td><select data-f="dst_Lfx"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Mfx (0.5)</td><td><select data-f="dst_Mfx05"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Mfx (1)</td><td><select data-f="dst_Mfx1"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Mfx (2)</td><td><select data-f="dst_Mfx2"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">PAS</td><td><select data-f="dst_PAS"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Lzd</td><td><select data-f="dst_Lzd"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Cfz</td><td><select data-f="dst_Cfz"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Cs</td><td><select data-f="dst_Cs"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Azi</td><td><select data-f="dst_Azi"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Bdq</td><td><select data-f="dst_Bdq"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">DLM</td><td><select data-f="dst_DLM"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+            <tr><td class="drug">Eto</td><td><select data-f="dst_Eto"><option value="">—</option><option>S</option><option>R</option><option>C</option></select></td></tr>
+          </table>
+          <div class="legend">R: Resistant; S: Susceptible; C: Contaminated; — Not done</div>
+        </div>
+
+        <div class="sub">Other tests</div>
+        <div class="fld"><label class="lbl">Test name</label><input type="text" data-f="otherTestName"></div>
+        <div class="fld"><label class="lbl">Result</label><input type="text" data-f="otherTestResult"></div>
+        <div class="fld"><label class="lbl">Date reported</label><input type="date" data-f="otherTestDateReported"></div>
+        <div class="grid2">
+          <div class="fld"><label class="lbl">Reported by</label><input type="text" data-f="otherTestReportedBy"></div>
+          <div class="fld"><label class="lbl">Laboratory name</label><input type="text" data-f="otherTestLab"></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="hintbar">🖨️ <b>PDF</b> → Print → <b>Save as PDF</b> → share on WhatsApp &nbsp;·&nbsp; प्रिंट → <b>PDF म्हणून जतन करा</b><br>⬇️ <b>Download</b> saves a copy file &nbsp;·&nbsp; ↗️ <b>Share</b> sends it straight to WhatsApp<br><span style="font-size:12px">यादीतून (home screen) प्रत्येक अर्जासाठी PDF / Download / Share बटणे वापरता येतील.</span></div>
+  </div>
+</div>
+
+<div class="actionbar" id="formActions" style="display:none">
+  <button class="btn btn-sec" id="backBtn">← Back</button>
+  <button class="btn btn-pri" id="saveBtn">💾 Save</button>
+  <button class="btn btn-sec" id="exportBtn">🖨️ PDF</button>
+</div>
+
+<div id="printView"></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+/* ================= STATE & STORAGE ================= */
+var LS_KEY = 'ntep_forms_v1';
+var records = [];
+var editingId = null;
+var CAN_SHARE_FILES = false;
+var $ = function(id){ return document.getElementById(id); };
+
+function loadStore(){
+  try{ var r = JSON.parse(localStorage.getItem(LS_KEY)); records = Array.isArray(r) ? r : []; }
+  catch(e){ records = []; }
+}
+function persist(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(records)); }catch(e){} }
+function toast(msg){
+  var t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._h); t._h = setTimeout(function(){ t.classList.remove('show'); }, 2600);
+}
+function uid(){ return 'f' + Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+function esc(s){
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+
+/* ================= NAVIGATION ================= */
+function playViewAnim(id){
+  var el = $(id); if(!el) return;
+  el.classList.remove('view-anim'); void el.offsetWidth; el.classList.add('view-anim');
+}
+function showHome(){
+  editingId = null;
+  $('formScreen').style.display = 'none';
+  $('formScreen').classList.remove('play');
+  $('formActions').style.display = 'none';
+  $('homeScreen').style.display = 'block';
+  playViewAnim('homeScreen');
+  renderList($('searchBox').value || '');
+  window.scrollTo(0,0);
+}
+function showForm(id){
+  editingId = id || null;
+  clearForm();
+  if(id){
+    var rec = records.find(function(r){ return r.id === id; });
+    if(rec) fillForm(rec.data);
+  }
+  $('homeScreen').style.display = 'none';
+  $('formScreen').style.display = 'block';
+  var fs = $('formScreen');
+  fs.classList.remove('play'); void fs.offsetWidth; fs.classList.add('play');
+  $('formActions').style.display = 'flex';
+  updateProgress();
+  window.scrollTo(0,0);
+}
+
+/* ================= HOME LIST ================= */
+function fmtDate(iso){
+  if(!iso) return '—';
+  var d = new Date(iso);
+  return isNaN(d) ? iso : d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'});
+}
+function renderList(q){
+  q = (q||'').trim().toLowerCase();
+  var list = records.filter(function(r){
+    var d = r.data || {};
+    if(!q) return true;
+    return ((d.patientName||'')+' '+(d.mobile||'')).toLowerCase().indexOf(q) >= 0;
+  });
+  list.sort(function(a,b){ return (b.updatedAt||'').localeCompare(a.updatedAt||''); });
+  var box = $('formList');
+  if(!list.length){
+    box.innerHTML = '<div class="empty">No saved forms yet.<br>Tap <b>＋ New Form</b> to start.<br><br>अजून कोणताही अर्ज जतन केलेला नाही.</div>';
+    return;
+  }
+  box.innerHTML = list.map(function(r){
+    var d = r.data || {};
+    return '<div class="rec">' +
+      '<div class="nm">' + esc(d.patientName || '(No name)') + '</div>' +
+      '<div class="meta">📱 ' + esc(d.mobile || '—') +
+      ' &nbsp;·&nbsp; 🧪 ' + esc(d.specimenDate || '—') +
+      ' &nbsp;·&nbsp; 🕒 ' + fmtDate(r.updatedAt) + '</div>' +
+      '<div class="row">' +
+        '<button class="btn btn-sec btn-sm" onclick="showForm(\'' + r.id + '\')">✏️ Edit</button>' +
+        '<button class="btn btn-pri btn-sm" onclick="exportPDF(\'' + r.id + '\')">🖨️ PDF</button>' +
+        '<button class="btn btn-sec btn-sm" onclick="downloadRecord(\'' + r.id + '\')">⬇️ Download</button>' +
+        (CAN_SHARE_FILES ? '<button class="btn btn-sec btn-sm" onclick="shareRecord(\'' + r.id + '\')">↗️ Share</button>' : '') +
+        '<button class="btn btn-danger btn-sm" onclick="delRecord(\'' + r.id + '\')">🗑️</button>' +
+      '</div></div>';
+  }).join('');
+}
+function delRecord(id){
+  var rec = records.find(function(r){ return r.id === id; });
+  var nm = rec && rec.data ? (rec.data.patientName || 'this form') : 'this form';
+  if(!confirm('Delete "' + nm + '"?\n\n"' + nm + '" हटवायचा?')) return;
+  records = records.filter(function(r){ return r.id !== id; });
+  persist(); renderList($('searchBox').value || '');
+  toast('Deleted / हटवले');
+}
+
+/* ================= FORM COLLECT / FILL ================= */
+function formEls(){
+  return Array.prototype.slice.call(document.querySelectorAll('#formScreen [data-f]'));
+}
+function collect(){
+  var data = {};
+  formEls().forEach(function(el){
+    var f = el.getAttribute('data-f'), t = el.type;
+    if(t === 'checkbox'){ data[f] = el.checked; }
+    else if(t === 'radio'){ if(el.checked) data[f] = el.value; }
+    else { data[f] = el.value; }
+  });
+  return data;
+}
+function fillForm(data){
+  formEls().forEach(function(el){
+    var f = el.getAttribute('data-f'), t = el.type, v = data[f];
+    if(t === 'checkbox'){ el.checked = !!v; }
+    else if(t === 'radio'){ el.checked = (v !== undefined && el.value === v); }
+    else { el.value = (v == null ? '' : v); }
+  });
+}
+function clearForm(){
+  formEls().forEach(function(el){
+    var t = el.type;
+    if(t === 'checkbox' || t === 'radio'){ el.checked = false; }
+    else { el.value = ''; }
+  });
+}
+function validate(data){
+  if(!((data.patientName||'').trim())) return 'Please enter patient name / रुग्णाचे नाव लिहा';
+  var m = (data.mobile||'').replace(/\D/g,'');
+  if(m && m.length !== 10) return 'Mobile number must be 10 digits / मोबाईल नंबर 10 अंकी असावा';
+  var a = (data.aadhar||'').replace(/\D/g,'');
+  if(a && a.length !== 12) return 'Aadhar must be 12 digits / आधार 12 अंकी असावा';
+  return null;
+}
+function saveRecord(silent){
+  var data = collect();
+  var err = validate(data);
+  if(err){ toast(err); return null; }
+  var now = new Date().toISOString();
+  if(editingId){
+    var rec = records.find(function(r){ return r.id === editingId; });
+    if(rec){ rec.data = data; rec.updatedAt = now; }
+  } else {
+    editingId = uid();
+    records.push({ id: editingId, createdAt: now, updatedAt: now, data: data });
+  }
+  persist();
+  if(!silent) toast('Saved / जतन केले ✓');
+  return editingId;
+}
+
+/* ================= EVENTS ================= */
+$('newFormBtn').addEventListener('click', function(){ showForm(null); });
+$('backBtn').addEventListener('click', function(){
+  if(confirm('Discard unsaved changes and go back?\nन जतन केलेले बदल सोडून परत जायचे?')) showHome();
+});
+$('saveBtn').addEventListener('click', function(){ saveRecord(false); });
+$('exportBtn').addEventListener('click', function(){
+  var id = saveRecord(true);
+  if(id) exportPDF(id);
+});
+$('searchBox').addEventListener('input', function(){ renderList(this.value); });
+document.addEventListener('DOMContentLoaded', function(){
+  loadStore();
+  enhanceUI();
+  showHome();
+});
+
+/* ================= UI ENHANCEMENTS ================= */
+function enhanceUI(){
+  /* numbered step badges on section titles (presentation only — fields untouched) */
+  Array.prototype.forEach.call(document.querySelectorAll('#formScreen .sec-title'), function(el){
+    if(el.querySelector('.step-n')) return;
+    var html = el.innerHTML;
+    var m = html.match(/^\s*(\d+)\.\s*/);
+    if(m) el.innerHTML = '<span class="step-n">' + m[1] + '</span> ' + html.slice(m[0].length);
+  });
+  /* smooth accordion for the lab section: wrap body for grid animation */
+  Array.prototype.forEach.call(document.querySelectorAll('details.lab'), function(det){
+    if(det.querySelector('.lab-body')) return;
+    var body = document.createElement('div'); body.className = 'lab-body';
+    var inner = document.createElement('div');
+    var kids = [];
+    Array.prototype.forEach.call(det.childNodes, function(n){
+      if(n.nodeName !== 'SUMMARY') kids.push(n);
+    });
+    kids.forEach(function(n){ inner.appendChild(n); });
+    body.appendChild(inner); det.appendChild(body);
+  });
+  /* share-sheet (file) support detection — Share button only shows when usable */
+  try{
+    if(navigator.canShare){
+      var f = new File(['x'], 't.html', {type: 'text/html'});
+      CAN_SHARE_FILES = !!navigator.canShare({files: [f]});
+    }
+  }catch(e){ CAN_SHARE_FILES = false; }
+  /* completion progress bar */
+  var fs = $('formScreen');
+  fs.addEventListener('input', scheduleProgress);
+  fs.addEventListener('change', scheduleProgress);
+}
+var _progT = null;
+function scheduleProgress(){
+  if(_progT) return;
+  _progT = setTimeout(function(){ _progT = null; updateProgress(); }, 120);
+}
+function updateProgress(){
+  var fields = document.querySelectorAll('#formScreen [data-f]');
+  var total = fields.length, done = 0;
+  Array.prototype.forEach.call(fields, function(el){
+    var t = (el.type || '').toLowerCase();
+    if(t === 'checkbox' || t === 'radio'){ if(el.checked) done++; }
+    else if(String(el.value == null ? '' : el.value).trim() !== '') done++;
+  });
+  var pct = total ? Math.round(done * 100 / total) : 0;
+  $('progressFill').style.width = pct + '%';
+  $('progressPct').textContent = pct + '%';
+}
+
+/* ================= PRINT / PDF EXPORT ================= */
+function pv(x){ x = (x == null ? '' : String(x)).trim(); return x ? esc(x) : '—'; }
+function pcb(label, on){ return '<span class="p-cb">' + (on ? '☑' : '☐') + '</span>&nbsp;' + esc(label); }
+function prow(label, value){ return '<div class="p-row"><span class="p-lab">' + esc(label) + ':</span> ' + pv(value) + '</div>'; }
+function psec(title){ return '<div class="p-sec"><div class="p-sec-t">' + title + '</div>'; }
+function pend(){ return '</div>'; }
+
+var DST_DRUGS = [
+  ['dst_R','R'],['dst_HinhA','H (inhA)'],['dst_HkatG','H (katG)'],['dst_Z','Z'],
+  ['dst_E','E'],['dst_S','S'],['dst_Km','Km'],['dst_Cm','Cm'],['dst_Am','Am'],
+  ['dst_Lfx','Lfx'],['dst_Mfx05','Mfx (0.5)'],['dst_Mfx1','Mfx (1)'],['dst_Mfx2','Mfx (2)'],
+  ['dst_PAS','PAS'],['dst_Lzd','Lzd'],['dst_Cfz','Cfz'],['dst_Cs','Cs'],
+  ['dst_Azi','Azi'],['dst_Bdq','Bdq'],['dst_DLM','DLM'],['dst_Eto','Eto']
+];
+var RG_DRUGS = [
+  ['rg_Lfx','Lfx'],['rg_Mfxh','Mfx(h)'],['rg_Bdq','Bdq'],['rg_Lzd','Lzd'],['rg_Cfz','Cfz'],
+  ['rg_Cs','Cs'],['rg_Z','Z'],['rg_E','E'],['rg_Eto','Eto'],['rg_Dlm','Dlm'],
+  ['rg_Am','Am'],['rg_Km','Km'],['rg_Cm','Cm']
+];
+
+function renderPrint(rec){
+  var d = rec.data || {}, h = '';
+  h += '<div class="p-doc">';
+  h += '<div class="p-title">NTEP Request Form For examination of biological specimen for TB</div>';
+  h += '<div class="p-sub">(Required for Diagnosis of TB, Drug Sensitivity Testing and follow up)</div>';
+  h += '<div class="p-annwrap"><span class="p-ann">ANNEXURE 15A</span></div>';
+
+  /* ---- 2. Patient information ---- */
+  h += psec('2. PATIENT INFORMATION');
+  h += '<div class="p-2col"><div>' + prow('Patient name', d.patientName) + prow('Age', d.age) +
+       prow('Mobile no.', d.mobile) + prow('Specimen date of collection', d.specimenDate) + '</div><div>' +
+       prow('Gender', d.gender) + prow('Specimen type', d.specimenType === 'Other' ? 'Other: ' + d.specimenTypeOther : d.specimenType) +
+       prow('Aadhar no.', d.aadhar) + prow('HIV status', d.hivStatus) + '</div></div>';
+  h += prow('Address with landmark', d.address);
+  h += '<div class="p-row"><span class="p-lab">Key populations:</span><div class="p-grid">' +
+    pcb('Contact of known TB Patient', d.kp_contact) + pcb('Diabetes', d.kp_diabetes) +
+    pcb('Tobacco', d.kp_tobacco) + pcb('Prison', d.kp_prison) + pcb('Miner', d.kp_miner) +
+    pcb('Migrant', d.kp_migrant) + pcb('Refugee', d.kp_refugee) + pcb('Urban slum', d.kp_slum) +
+    pcb('Health-care worker', d.kp_hcw) + pcb('Other' + (d.kp_other_text ? ': ' + d.kp_other_text : ''), d.kp_other) +
+    '</div></div>';
+  h += pend();
+
+  /* ---- 3. Referring facility ---- */
+  h += psec('3. REFERRING FACILITY');
+  h += '<div class="p-2col"><div>' + prow('Name of referring facility', d.facilityName) +
+       prow('Type', d.facilityType) + prow('Health Establishment ID (NIKSHAY)', d.healthEstId) + '</div><div>' +
+       prow('State', d.state) + prow('District', d.district) + prow('Tuberculosis Unit (TU)', d.tu) + '</div></div>';
+  h += '<div class="p-2col"><div>' + prow('Episode ID', d.episodeId) + '</div><div>' + prow('Test request ID', d.testRequestId) + '</div></div>';
+  h += pend();
+
+  /* ---- 4. Reason for testing ---- */
+  h += psec('4. REASON FOR TESTING');
+  h += '<div class="p-row"><span class="p-lab">A. Diagnosis and follow up of TB</span></div>';
+  h += '<div class="p-row"><span class="p-lab">H/O anti TB Rx &gt;1 month:</span> ' + pv(d.antiTBRx) + '</div>';
+  h += '<div class="p-row"><div class="p-grid">' + pcb('Presumptive TB', d.tb_presumptive) +
+       pcb('Repeat Exam', d.tb_repeat) + pcb('Private referral', d.tb_private) + pcb('Presumptive NTM', d.tb_ntm) + '</div></div>';
+  h += '<div class="p-2col"><div>' + prow('Predominant symptom', d.symptom) + '</div><div>' + prow('Duration (days)', d.symptomDays) + '</div></div>';
+  h += '<div class="p-row"><span class="p-lab">Follow-up:</span> ' + pcb('End IP', d.fu_endip) + ' ' + pcb('End CP', d.fu_endcp) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Post treatment:</span> ' + pcb('6m', d.pt_6m) + ' ' + pcb('12m', d.pt_12m) + ' ' + pcb('18m', d.pt_18m) + ' ' + pcb('24m', d.pt_24m) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">B. Drug-resistant TB</span> — <span class="p-lab">Case type:</span> ' + pv(d.caseType) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Type of case:</span> ' + pcb('H mono/poly TB', d.dr_h) + ' ' + pcb('MDR/RR', d.dr_mdrrr) + ' ' + pcb('XDR TB', d.dr_xdr) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Regimen type:</span> ' + pcb('All oral H mono/poly TB', d.reg_alloral_h) + ' ' + pcb('Shorter MDR TB regimen', d.reg_shorter) + ' ' + pcb('All oral longer regimen', d.reg_longer) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Regimen composition:</span><div class="p-grid">' +
+       RG_DRUGS.map(function(p){ return pcb(p[1], d[p[0]]); }).join('') +
+       pcb('Other' + (d.rg_Other_text ? ': ' + d.rg_Other_text : ''), d.rg_Other) + '</div></div>';
+  h += prow('Treatment follow-up (months)', d.treatFuMonths);
+  h += '<div class="p-row"><span class="p-lab">C. Presumptive MDR TB:</span> ' + pcb('At diagnosis', d.mdr_atdiag) + ' ' + pcb('Contact of MDR/RR TB', d.mdr_contact) + ' ' + pcb('Follow up Sm +ve', d.mdr_smpos) + ' ' + pcb('Private referral', d.mdr_private) + ' ' + pcb('Discordance resolution', d.mdr_discord) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">D. Presumptive H mono/poly:</span> ' + pcb('Yes', d.pres_h) + '</div>';
+  h += '<div class="p-row"><span class="p-lab">E. Presumptive XDR TB:</span> ' + pcb('MDR/RR TB at Diagnosis', d.xdr_atdiag) + ' ' + pcb('Follow up Culture positive', d.xdr_cultpos) + (d.xdr_cultpos_months ? ' (' + esc(d.xdr_cultpos_months) + ' months)' : '') + ' ' + pcb('Failure or recurrent of MDR/RR-TB regimen', d.xdr_fail) + ' ' + pcb('Discordance resolution', d.xdr_discord) + '</div>';
+  h += pend();
+
+  /* ---- 5. Test requested ---- */
+  h += psec('5. TEST REQUESTED');
+  h += '<div class="p-row"><div class="p-grid">' + pcb('Microscopy', d.t_micro) + pcb('TST', d.t_tst) +
+       pcb('IGRA', d.t_igra) + pcb('Chest X-ray', d.t_xray) + pcb('Cytopathology', d.t_cyto) +
+       pcb('Histopathology', d.t_histo) + pcb('CBNAAT', d.t_cbnaat) + pcb('TrueNaat', d.t_truenat) +
+       pcb('Culture', d.t_culture) + pcb('DST', d.t_dst) + pcb('FL-LPA', d.t_fllpa) + pcb('SL-LPA', d.t_sllpa) +
+       pcb('Gene Sequencing', d.t_seq) + pcb('Other' + (d.t_other_text ? ': ' + d.t_other_text : ''), d.t_other) + '</div></div>';
+  h += '<div class="p-2col"><div>' + prow('Requested by (designation)', d.requestedBy) + '</div><div>' +
+       prow('Contact number', d.reqContact) + '</div></div>' + prow('Email ID', d.reqEmail);
+  h += pend();
+
+  /* ---- 6. Results ---- */
+  h += psec('6. RESULTS (For laboratory use)');
+  h += prow('NIKSHAY ID Generated', d.nikshayId);
+  h += '<div class="p-row"><span class="p-lab">Microscopy</span> — <span class="p-lab">Method:</span> ' + pv(d.microMethod) + '</div>';
+  h += '<div class="p-2col"><div><span class="p-lab">Sample A</span> — Sr: ' + pv(d.microA_srno) +
+       ' · Visual: ' + pcb('S', d.microA_S) + ' ' + pcb('M', d.microA_M) + ' ' + pcb('B', d.microA_B) +
+       ' · Result: <b>' + pv(d.microA_result) + '</b></div><div><span class="p-lab">Sample B</span> — Sr: ' + pv(d.microB_srno) +
+       ' · Visual: ' + pcb('S', d.microB_S) + ' ' + pcb('M', d.microB_M) + ' ' + pcb('B', d.microB_B) +
+       ' · Result: <b>' + pv(d.microB_result) + '</b></div></div>';
+  h += '<div class="p-2col"><div>' + prow('Date tested', d.microDateTested) + prow('Date reported', d.microDateReported) + '</div><div>' +
+       prow('Reported by', d.microReportedBy) + prow('Laboratory name', d.microLab) + '</div></div>';
+  h += '<div class="p-row"><span class="p-lab">NAAT</span> — Sr: ' + pv(d.naatSrno) + ' · Type: ' + pv(d.naatType) + ' · Sample: ' + pv(d.naatSample) + '</div>';
+  h += '<div class="p-row">M. Tuberculosis: <b>' + pv(d.naatMtb) + '</b> · Rif Resistance: <b>' + pv(d.naatRif) + '</b> · Outcome: ' + pv(d.naatOutcome) + (d.naatErrorCode ? ' (code: ' + esc(d.naatErrorCode) + ')' : '') + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Culture</span> — <span class="p-lab">Method:</span> ' + pv(d.cultureMethod) + '</div>';
+  h += '<div class="p-row">Row 1 — Sr: ' + pv(d.cult1_srno) + ' · Result: <b>' + pv(d.cult1_result) + '</b>' + (d.cult1_species ? ' (species: ' + esc(d.cult1_species) + ')' : '') + '</div>';
+  h += '<div class="p-row">Row 2 — Sr: ' + pv(d.cult2_srno) + ' · Result: <b>' + pv(d.cult2_result) + '</b>' + (d.cult2_species ? ' (species: ' + esc(d.cult2_species) + ')' : '') + '</div>';
+  h += '<div class="p-2col"><div>' + prow('Date result', d.cultDateResult) + prow('Date reported', d.cultDateReported) + '</div><div>' +
+       prow('Reported by', d.cultReportedBy) + prow('Laboratory name', d.cultLab) + '</div></div>';
+  h += '<div class="p-row"><span class="p-lab">First line LPA</span> — Sr: ' + pv(d.flpaSrno) + ' · ' + pv(d.flpaType) + '</div>';
+  h += '<div class="p-row">Rifampicin (R): <b>' + pv(d.flpa_R) + '</b>' + (d.flpa_R_remark ? ' — ' + esc(d.flpa_R_remark) : '') +
+       ' · Isoniazid (KatG): <b>' + pv(d.flpa_KatG) + '</b>' + (d.flpa_KatG_remark ? ' — ' + esc(d.flpa_KatG_remark) : '') +
+       ' · Isoniazid (InhA): <b>' + pv(d.flpa_InhA) + '</b>' + (d.flpa_InhA_remark ? ' — ' + esc(d.flpa_InhA_remark) : '') + '</div>';
+  h += '<div class="p-row"><span class="p-lab">Second line LPA</span> — Sr: ' + pv(d.slpaSrno) + ' · ' + pv(d.slpaType) + '</div>';
+  h += '<div class="p-row">Levofloxacin: <b>' + pv(d.slpa_Lfx) + '</b>' + (d.slpa_Lfx_remark ? ' — ' + esc(d.slpa_Lfx_remark) : '') +
+       ' · Moxifloxacin: <b>' + pv(d.slpa_Mfx) + '</b>' + (d.slpa_Mfx_remark ? ' — ' + esc(d.slpa_Mfx_remark) : '') +
+       ' · Amikacin: <b>' + pv(d.slpa_Am) + '</b>' + (d.slpa_Am_remark ? ' — ' + esc(d.slpa_Am_remark) : '') +
+       ' · Kanamycin: <b>' + pv(d.slpa_Km) + '</b>' + (d.slpa_Km_remark ? ' — ' + esc(d.slpa_Km_remark) : '') +
+       ' · Capreomycin: <b>' + pv(d.slpa_Cm) + '</b>' + (d.slpa_Cm_remark ? ' — ' + esc(d.slpa_Cm_remark) : '') + '</div>';
+  h += '<div class="p-row"><span class="p-lab">DST</span> — Sr: ' + pv(d.dstSrno) + '</div>';
+  h += '<table class="p-dst"><tr>' + DST_DRUGS.map(function(p){ return '<th>' + p[1] + '</th>'; }).join('') + '</tr><tr>' +
+       DST_DRUGS.map(function(p){ return '<td>' + (d[p[0]] || '—') + '</td>'; }).join('') + '</tr></table>';
+  h += '<div class="p-row" style="font-size:9px">R: Resistant; S: Susceptible; C: Contaminated; — Not done</div>';
+  h += prow('Other test name', d.otherTestName) + prow('Result', d.otherTestResult) + prow('Date reported', d.otherTestDateReported);
+  h += '<div class="p-2col"><div>' + prow('Reported by', d.otherTestReportedBy) + '</div><div>' + prow('Laboratory name', d.otherTestLab) + '</div></div>';
+  h += pend();
+
+  h += '<div class="p-foot"><div><div class="p-sig">Signature of requesting MO / Staff</div></div>' +
+       '<div><div class="p-sig">Date &amp; Seal</div></div></div>';
+  h += '</div>';
+  return h;
+}
+
+function exportPDF(id){
+  var rec = records.find(function(r){ return r.id === id; });
+  if(!rec){ toast('Record not found'); return; }
+  var pvEl = $('printView');
+  pvEl.innerHTML = renderPrint(rec);
+  /* force layout so mobile browsers paint the fresh content before the print dialog opens */
+  void pvEl.offsetHeight;
+  var doPrint = function(){ setTimeout(function(){ window.print(); }, 150); };
+  if(typeof requestAnimationFrame === 'function'){
+    requestAnimationFrame(function(){ requestAnimationFrame(doPrint); });
+  } else { doPrint(); }
+}
+
+/* ---------- standalone document (download / share fallback) ---------- */
+function docStyles(){
+  var el = document.getElementById('docStyles');
+  return el ? el.textContent : '';
+}
+function safeName(s){
+  s = String(s == null ? '' : s).trim().replace(/[^\w\u0900-\u097F]+/g, '-').replace(/^-+|-+$/g, '');
+  return s || 'form';
+}
+function standaloneDoc(rec){
+  var d = rec.data || {};
+  var dt = d.specimenDate || (rec.updatedAt || '').slice(0, 10) || 'undated';
+  var title = 'NTEP Request Form (Annexure 15A) — ' + (d.patientName || 'Unnamed');
+  var html = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">' +
+    '<meta name="viewport" content="width=device-width, initial-scale=1">' +
+    '<title>' + esc(title) + '</title>' +
+    '<style>' + docStyles() + '</style></head><body>' +
+    '<div class="p-meta">Exported: ' + esc(fmtDateTime(rec.updatedAt)) + '</div>' +
+    renderPrint(rec) + '</body></html>';
+  return { html: html, name: 'NTEP-' + safeName(d.patientName) + '-' + dt + '.html' };
+}
+function fmtDateTime(iso){
+  if(!iso) return '';
+  var d = new Date(iso);
+  return isNaN(d) ? iso : d.toLocaleString('en-IN', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+function downloadRecord(id){
+  var rec = records.find(function(r){ return r.id === id; });
+  if(!rec){ toast('Record not found'); return; }
+  var doc = standaloneDoc(rec);
+  var blob = new Blob([doc.html], {type: 'text/html;charset=utf-8'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = doc.name;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+  toast('Downloaded: ' + doc.name + ' / जतन झाले ✓');
+}
+function shareRecord(id){
+  var rec = records.find(function(r){ return r.id === id; });
+  if(!rec){ toast('Record not found'); return; }
+  var doc = standaloneDoc(rec);
+  try{
+    var file = new File([doc.html], doc.name, {type: 'text/html'});
+    if(navigator.canShare && navigator.canShare({files: [file]})){
+      navigator.share({files: [file], title: doc.name, text: 'NTEP Request Form — ' + (rec.data.patientName || '')})
+        .catch(function(){ /* user dismissed the sheet */ });
+      return;
+    }
+  }catch(e){}
+  toast('Sharing not supported here — use ⬇️ Download');
+}
+</script>
+</body>
+</html>
